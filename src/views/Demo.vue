@@ -15,7 +15,7 @@
           >{{val.name}}</li>
         </ul>
       </el-form-item>
-      <el-form-item label="购买数量" v-if="simulatedData.specArr.length > 0">
+      <el-form-item label="购买数量">
         <el-input-number v-model="specStock" :min="1" :max="specMaxStock" size="mini"></el-input-number>
       </el-form-item>
     </el-form>
@@ -23,14 +23,14 @@
 </template>
 <script>
 export default {
-  name: "About",
+  name: "Demo",
   data() {
     return {
       simulatedData: {
         specArr: [],
-        tableData: this.$store.state.tableData
+        tableData: []
       },
-      specArr: this.$store.state.specArr,
+      specArr: this.$store.state.demoSpecArr,
       specAllValue: {},
       specValue: {},
       conName: [],
@@ -44,7 +44,7 @@ export default {
     };
   },
   created() {
-    this.simulatedData.tableData = this.$store.state.tableData;
+    this.simulatedData.tableData = this.$store.state.demoTableData;
     for (var i in this.simulatedData.tableData) {
       this.shopItemInfo[
         this.simulatedData.tableData[i].specs.toString()
