@@ -1,21 +1,30 @@
 module.exports = {
-    publicPath: './',
+    publicPath: process.env.NODE_ENV === 'production'
+    ? 'vue-element-more-specifications'
+    : '/',
+    // 构建输出目录 npm run build
     outputDir: 'dist',
+    indexPath: 'index.html',
+    //关键点在这
+    runtimeCompiler: true,
+    // 生产环境是否生成 sourceMap 文件
+    productionSourceMap: true,
+    // eslint-loader 是否在保存的时候检查
     lintOnSave: true,
-    runtimeCompiler: true, //关键点在这  
-    // 调整内部的 webpack 配置。
-    // 查阅 https://github.com/vuejs/vue-doc-zh-cn/vue-cli/webpack.md
-    chainWebpack: () => {},
+    // webpack 配置~
+    chainWebpack: () => { },
     configureWebpack: () => {},
-    // 配置 webpack-dev-server 行为。
+
+
+
     devServer: {
-      open: process.platform === 'darwin',
-      host: '0.0.0.0',
-      port: 8080,
-      https: false,
-      hotOnly: false,
-      // 查阅 https://github.com/vuejs/vue-doc-zh-cn/vue-cli/cli-service.md#配置代理
-      proxy: null, // string | Object
-      before: app => {}
+        open: process.platform === 'darwin',
+        host: '0.0.0.0',
+        port: 8080,
+        https: false,
+        hotOnly: false,
+        proxy: null, // 设置代理
+        before: app => { }
+
     }
-  }
+}
