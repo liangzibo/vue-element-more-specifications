@@ -13,6 +13,6 @@ demo [vue-element-more-specifications](https://liangzibo.github.io/vue-element-m
 
 ## 展示
 
-
+![picture](https://raw.githubusercontent.com/liangzibo/vue-element-more-specifications/master/demo/20190510151840.jpg)
 
 
