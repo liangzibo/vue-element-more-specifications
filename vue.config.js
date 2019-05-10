@@ -1,7 +1,7 @@
 module.exports = {
     publicPath: process.env.NODE_ENV === 'production'? 'vue-element-more-specifications': '/',
     // 构建输出目录 npm run build
-    outputDir: 'dist',
+    outputDir: 'docs',
     indexPath: 'index.html',
     //关键点在这
     runtimeCompiler: true,
