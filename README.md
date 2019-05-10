@@ -7,7 +7,9 @@
 demo [vue-element-more-specifications](https://liangzibo.github.io/vue-element-more-specifications/#/)
 
 ## 技术栈
-  vue3.0/vuex/element ui
+ 1. [vue3.0](https://cli.vuejs.org/zh/)
+ 2. [vuex](https://vuex.vuejs.org/zh/guide/)
+ 3. [element ui](https://element.eleme.cn/#/zh-CN/component/installation)
 
 ## 展示
 
