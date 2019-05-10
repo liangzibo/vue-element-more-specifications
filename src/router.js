@@ -5,16 +5,14 @@ import Router from "vue-router";
 Vue.use(Router);
 
 export default new Router({
-    mode: "history",
+    // mode: "history",
     base: process.env.BASE_URL,
     routes: [
         {
             path: "/",
             name: "home",
             component: () => import("./views/Home.vue"),
-            meta: {
-                keepAlive: true // 需要被缓存
-            }
+            meta: {keepAlive: false}
         },
         {
             path: "/about",
